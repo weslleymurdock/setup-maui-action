@@ -1,9 +1,10 @@
 # setup-maui Action
 
-[![Action test on Ubuntu](https://github.com/weslleymurdock/setup-maui-action/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/weslleymurdock/setup-maui-action/actions/workflows/ubuntu.yml) [![Action test on MacOs](https://github.com/weslleymurdock/setup-maui-action/actions/workflows/macos.yml/badge.svg)](https://github.com/weslleymurdock/setup-maui-action/actions/workflows/macos.yml) [![Action test on Windows](https://github.com/weslleymurdock/setup-maui-action/actions/workflows/windows.yml/badge.svg)](https://github.com/weslleymurdock/setup-maui-action/actions/workflows/windows.yml)
+ [![Action test on MacOs](https://github.com/weslleymurdock/setup-maui-action/actions/workflows/macos.yml/badge.svg)](https://github.com/weslleymurdock/setup-maui-action/actions/workflows/macos.yml)
+ [![Action test on Windows](https://github.com/weslleymurdock/setup-maui-action/actions/workflows/windows.yml/badge.svg)](https://github.com/weslleymurdock/setup-maui-action/actions/workflows/windows.yml)
 
- 
-Github Action to setup [.NET MAUI](https://dot.net/maui) on any OS runner ⚙️🖥
+
+Github Action to setup [.NET MAUI](https://dot.net/maui) on osx and windows OS runner's ⚙️🖥
 Needs an existent .NET Setup
 
 * * *
@@ -20,7 +21,7 @@ Needs an existent .NET Setup
 
 ### 1️⃣ Run formula from `PUBLIC` Github repository
 
-**Unix**
+**OSX**
 
 ```yaml
     - uses: actions/setup-dotnet@v4
