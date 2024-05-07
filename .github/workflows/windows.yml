@@ -18,7 +18,7 @@ jobs:
       - name: Create classlib
         run: dotnet new mauilib -n MauiLibDemo
 
-      - name: Create classlib
+      - name: Build classlib
         run: dotnet build MauiLibDemo/MauiLibDemo.csproj
 
   
