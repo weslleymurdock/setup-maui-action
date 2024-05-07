@@ -1,6 +1,6 @@
 name: 'Setup MAUI Action'
 
-description: 'Github Action to setup .net MAUI on any OS runner ⚙️🖥'
+description: 'Github Action to setup .net MAUI on windows and osx OS runners ⚙️🖥'
 
 inputs:
     dotnet-version: 
@@ -10,7 +10,14 @@ inputs:
     global-json-file:
         description: 'Optional global.json location, if your global.json isn''t located in the root of the repo.' 
         required: false
-      
+    cache:
+        description: 'Optional input to enable caching of the NuGet global-packages folder'
+        required: false
+        default: 'false'
+    cache-dependency-path:
+        description: 'Used to specify the path to a dependency file: packages.lock.json. Supports wildcards or a list of file names for caching multiple dependencies.'
+        required: false 
+
 runs:
   using: "composite"
   steps:
@@ -23,10 +30,14 @@ runs:
       env:
         INPUT_DOTNET_VERSION: ${{ inputs.dotnet-version }}
         INPUT_JSON_FILE: ${{ inputs.global-json-file }}
+        INPUT_CACHE: ${{ inputs.cache }}
+        INPUT_CACHE_DEP: ${{ inputs.cache-dependency-path }}  
       with:
         dotnet-version: ${{ env.INPUT_DOTNET_VERSION }}
         global-json-file: ${{ env.INPUT_JSON_FILE }}
-            
+        cache: ${{ env.INPUT_CACHE }}
+        cache-dependency-path: ${{ env.INPUT_CACHE }}
+        
     - name: Setup dotnet
       run: |
         dotnet --version
