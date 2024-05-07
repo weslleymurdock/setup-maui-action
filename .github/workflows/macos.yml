@@ -4,8 +4,7 @@ on:
   push:
   workflow_dispatch:
 
-jobs:
-
+jobs: 
   public-repo:
     runs-on: macos-latest
     steps: 

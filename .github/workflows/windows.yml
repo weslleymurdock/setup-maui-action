@@ -8,10 +8,10 @@ jobs:
 
   public-repo:
     runs-on: windows-latest
-    steps: 
+    steps:  
       - uses: weslleymurdock/setup-maui-action@main
-      with:
-        dotnet-version: 8.0.x  
+        with:
+          dotnet-version: 8.0.x  
       
       - name: Create classlib
         run: dotnet new mauilib -n MauiLibDemo
