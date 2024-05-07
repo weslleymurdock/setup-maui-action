@@ -23,7 +23,8 @@ runs:
       env:
         INPUT_DOTNET_VERSION: ${{ inputs.dotnet-version }}
       with:
-        dotnet-version: $INPUT_DOTNET_VERSION
+        dotnet-version: ${{ env.INPUT_DOTNET_VERSION }}
+    
     - name: Setup dotnet
       run: |
         dotnet --version
